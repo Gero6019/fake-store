@@ -15,11 +15,6 @@ function App() {
     getProducts()
   },[])
 
-  const getNameProducts = ()=>{
-      return <ul>
-      <li>{products[6].title}</li>
-    </ul>
-  }
 
   if(products.length == 0){
     return <>
@@ -31,9 +26,7 @@ function App() {
   return (
     <>
       <h1>Falsa Tienda Online</h1>
-      <button onClick={()=>{console.log(products)}}>Ver productos</button>
-      {getNameProducts()}
-      <Products product={products[4]} />
+      <Products products={products} />
     </>
   )
 }
